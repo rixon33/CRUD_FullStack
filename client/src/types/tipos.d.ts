@@ -22,14 +22,12 @@ export interface Animal {
     año_nacimiento: number;
     pais_origen: string;
     continente: string;
-
     id_zoo?: number;
     id_especie?: number;
-
-    // Estos vienen del JOIN
-    nombre_zoologico?: string;
-    especie?: string;
-    nombre_cientifico?: string;
+    // ✅ Cambiar estos para que coincidan con el backend:
+    zoologico?: string;      // era "nombre_zoologico"
+    especie?: string;        // era "especie" (está bien)
+    // nombre_cientifico?: string; // ❌ Eliminar esta línea
 }
 
 export type AnimalFormData = {
