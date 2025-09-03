@@ -3,7 +3,7 @@ import axios from "axios";
 const API_URL = 'https://crudfullstack-production.up.railway.app/api';
 
 export const getAnimales = async (): Promise<Animal[]> => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const response = await axios.get<Animal[]>(`${API_URL}/animales`);
     return response.data;
 };
