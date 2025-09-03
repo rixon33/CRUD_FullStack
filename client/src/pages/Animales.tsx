@@ -98,13 +98,13 @@ export const Animales = () => {
                                           {animal.continente}
                                       </td>
                                       <td className="px-6 py-4">
-                                          {animal.nombre_zoologico}
+                                          {animal.zoologico}
                                       </td>
                                       <td className="px-6 py-4">
                                           {animal.especie}
                                       </td>
                                       <td className="px-6 py-4">
-                                          {animal.nombre_cientifico}
+                                          {animal.especie}
                                       </td>
                                       <td className="px-6 py-4 flex gap-2 font-semibold">
                                           <button
