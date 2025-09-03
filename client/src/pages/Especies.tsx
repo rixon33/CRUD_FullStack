@@ -14,7 +14,7 @@ export const Especies = () => {
     const [showForm, setShowForm] = useState(false);
     const [especieSeleccionada, setEspecieSeleccionado] =
         useState<Especie | null>(null);
-    const { data: especies, isLoading } = useQuery<Especie[]>({
+    const { data: especies = [], isLoading } = useQuery<Especie[]>({
         queryKey: ["especies"],
         queryFn: getEsp,
     });

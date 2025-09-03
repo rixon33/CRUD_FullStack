@@ -16,7 +16,7 @@ export const Animales = () => {
 
     const queryClient = useQueryClient();
 
-    const { data: animales, isLoading } = useQuery<Animal[]>({
+    const { data: animales = [], isLoading } = useQuery<Animal[]>({
         queryKey: ["animales"],
         queryFn: getAnimales,
     });

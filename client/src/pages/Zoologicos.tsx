@@ -13,7 +13,7 @@ export const Zoologicos = () => {
     const [zooSeleccionado, setZooSeleccionado] = useState<Zoologico | null>(
         null
     );
-    const { data: zoos, isLoading } = useQuery<Zoologico[]>({
+    const { data: zoos = [], isLoading } = useQuery<Zoologico[]>({
         queryKey: ["zoologicos"],
         queryFn: getZoos,
     });
