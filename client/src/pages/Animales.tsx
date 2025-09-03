@@ -31,7 +31,7 @@ export const Animales = () => {
     });
 
     return (
-        <div className="py-26 px-40">
+        <div className="py-20 px-20 lg:py-26 lg:px-40">
             <div className="bg-white overflow-x-auto shadow-md rounded-md flex flex-col gap-4 pb-10 px-10">
                 <div className="flex items-center justify-between pt-7">
                     <h2 className="text-xl font-semibold text-gray-600">
