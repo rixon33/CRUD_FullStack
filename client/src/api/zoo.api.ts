@@ -1,7 +1,7 @@
 import type { Zoologico } from "../types/tipos";
 import axios from "axios";
 
-const API_URL = 'https://profound-possibility-production-1ee3.up.railway.app/api';
+const API_URL = 'https://crudfullstack-production.up.railway.app/api';
 
 export const getZoos = async (): Promise<Zoologico[]> => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
