@@ -24,10 +24,8 @@ export interface Animal {
     continente: string;
     id_zoo?: number;
     id_especie?: number;
-    // ✅ Cambiar estos para que coincidan con el backend:
-    zoologico?: string;      // era "nombre_zoologico"
-    especie?: string;        // era "especie" (está bien)
-    // nombre_cientifico?: string; // ❌ Eliminar esta línea
+    zoologico?: string;
+    especie?: string;
 }
 
 export type AnimalFormData = {

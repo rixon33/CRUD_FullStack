@@ -6,6 +6,7 @@ import { useState } from "react";
 import { AnimalForm } from "../components/animales/AnimalForm";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import toast from "react-hot-toast";
+import { AnimalesChart } from "../components/charts/AnimalesChar";
 
 export const Animales = () => {
     const [animalAEliminar, setAnimalAEliminar] = useState<Animal | null>(null);
@@ -108,7 +109,7 @@ export const Animales = () => {
                                       </td>
                                       <td className="px-6 py-4 flex gap-2 font-semibold">
                                           <button
-                                              className="px-3 py-1.5  text-white rounded hover:bg-[#471fa3d6] bg-[#471fa3]"
+                                              className="px-3 py-1.5 hover:cursor-pointer  text-white rounded hover:bg-[#471fa3d6] bg-[#471fa3]"
                                               onClick={() => {
                                                   setAnimalSeleccionado(animal);
                                                   setShowForm(true);
@@ -117,7 +118,7 @@ export const Animales = () => {
                                               Editar
                                           </button>
                                           <button
-                                              className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
+                                              className="px-3 py-1 bg-red-600 hover:cursor-pointer text-white rounded hover:bg-red-700"
                                               onClick={() =>
                                                   setAnimalAEliminar(animal)
                                               }
@@ -141,6 +142,7 @@ export const Animales = () => {
                     />
                 )}
             </div>
+            <AnimalesChart animales={animales} />
         </div>
     );
 };

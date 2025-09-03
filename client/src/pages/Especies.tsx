@@ -7,6 +7,7 @@ import { deleteEsp } from "../api/esp.api";
 import toast from "react-hot-toast";
 import { ConfirmDialog } from "../components/ConfirmDialog";
 import { EspForm } from "../components/especies/EspForm";
+import { EspeciesChart } from "../components/charts/EspeciesChar";
 export const Especies = () => {
     const [especieAEliminar, setEspecieAEliminar] = useState<Especie | null>(
         null
@@ -144,6 +145,7 @@ export const Especies = () => {
                     />
                 )}
             </div>
+            <EspeciesChart especies={especies} />
         </div>
     );
 };

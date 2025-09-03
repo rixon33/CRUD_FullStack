@@ -7,6 +7,8 @@ import { ZooForm } from "../components/zoologicos/ZooForm";
 import { deleteZoo } from "../api/zoo.api";
 import toast from "react-hot-toast";
 import { ConfirmDialog } from "../components/ConfirmDialog";
+import { ZooChart } from "../components/charts/ZooChar";
+
 export const Zoologicos = () => {
     const [zooAEliminar, setZooAEliminar] = useState<Zoologico | null>(null);
     const [showForm, setShowForm] = useState(false);
@@ -125,7 +127,7 @@ export const Zoologicos = () => {
                                             "Error al eliminar el zoológico"
                                         );
                                     }
-                                },  
+                                },
                             });
                             setZooAEliminar(null);
                         }}
@@ -133,6 +135,7 @@ export const Zoologicos = () => {
                     />
                 )}
             </div>
+            <ZooChart zoos={zoos} />
         </div>
     );
 };
