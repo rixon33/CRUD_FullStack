@@ -1,7 +1,8 @@
 import type { Especie } from "../types/tipos";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL;
+// En esp.api.ts
+const API_URL = import.meta.env.VITE_API_URL || 'https://profound-possibility-production-1ee3.up.railway.app/api';
 
 export const getEsp = async (): Promise<Especie[]> => {
     await new Promise(resolve => setTimeout(resolve, 2000));

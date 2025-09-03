@@ -1,6 +1,6 @@
 import type { Animal, AnimalFormData } from "../types/tipos";
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || 'https://profound-possibility-production-1ee3.up.railway.app/api';
 
 export const getAnimales = async (): Promise<Animal[]> => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
