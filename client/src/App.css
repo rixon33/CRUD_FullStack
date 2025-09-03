@@ -3,3 +3,21 @@
 body {
     @apply bg-[#020436f9] text-[#eee];
 }
+
+.space {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background: transparent;
+    box-shadow: var(--space-layer);
+    animation: moveStars var(--duration) linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}

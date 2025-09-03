@@ -9,6 +9,7 @@ import { Zoologicos } from "./pages/Zoologicos.tsx";
 import { Especies } from "./pages/Especies.tsx";
 import { Animales } from "./pages/Animales.tsx";
 import { Footer } from "./components/Footer.tsx";
+import StarBackground from "./components/StarBackground.tsx";
 
 // Instanciamos el cliente global
 const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
         <StrictMode>
             <QueryClientProvider client={queryClient}>
+                <StarBackground />
                 <NavBar />
                 <Routes>
                     <Route path="/" element={<App />} />
@@ -25,7 +27,7 @@ createRoot(document.getElementById("root")!).render(
                     <Route path="/ani" element={<Animales />} />
                 </Routes>
                 <Footer />
-                <Toaster position="top-right"/>
+                <Toaster position="top-right" />
             </QueryClientProvider>
         </StrictMode>
     </BrowserRouter>
