@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export const NavBar = () => {
     return (
-        <div className="fixed flex w-full border-b text-white border-b-gray-600 justify-between font-semibold tracking-wide bg-[#111] p-4">
+        <div className="fixed flex w-full border-b bg-[#050718]/70 backdrop-blur-sm text-white border-b-gray-600 justify-between font-semibold tracking-wide  p-4">
             <Link to={"/"}>CRUD</Link>
             <div className="flex gap-4">
                 <Link to={"/zoo"}>Zoologicos</Link>
